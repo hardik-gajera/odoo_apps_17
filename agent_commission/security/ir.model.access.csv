@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_commission_define,access_commission_define,model_commission_define,base.group_user,1,1,1,1
+access_commission_calculation,access_commission_calculation,model_commission_calculation,base.group_user,1,1,1,1
+access_agent_commission,access_agent_commission,model_agent_commission,base.group_user,1,1,1,1
+access_commission_payment,access_commission_payment,model_commission_payment,base.group_user,1,1,1,1
+access_agent_commission_payment,access_agent_commission_payment,model_agent_commission_payment,base.group_user,1,1,1,1

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="agent_commission_seq" model="ir.sequence">
+            <field name="name">Agent Commission</field>
+            <field name="code">agent.commission</field>
+            <field name="prefix">AC/</field>
+            <field name="padding">5</field>
+            <field eval="False" name="company_id"/>
+        </record>
+
+    </data>
+</odoo>

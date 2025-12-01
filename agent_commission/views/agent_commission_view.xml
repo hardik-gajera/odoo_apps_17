@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="agent_commission_form_view" model="ir.ui.view">
+            <field name="name">agent.commission.view.form</field>
+            <field name="model">agent.commission</field>
+            <field name="arch" type="xml">
+                <form create="0">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="agent_id"/>
+                            <field name="date"/>
+                            <field name="amount" widget='monetary'/>
+                            <field name="state"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="agent_commission_tree_view" model="ir.ui.view">
+            <field name="name">agent.commission.view.list</field>
+            <field name="model">agent.commission</field>
+            <field name="arch" type="xml">
+                <tree create="0" edit="0">
+                    <field name="name"/>
+                    <field name="agent_id"/>
+                    <field name="date"/>
+                    <field name="amount" widget='monetary'/>
+                    <field name="state"/>
+                    <button name="cancel_commission" icon="fa-ban" class="oe_stat_button" title="Cancel Commission" />
+                </tree>
+            </field>
+        </record>
+
+            <!-- Actions -->
+        <record id="agent_commission_action" model="ir.actions.act_window">
+            <field name="name">Agent Commission</field>
+            <field name="res_model">agent.commission</field>
+            <field name='view_mode'>tree,form</field>
+        </record>
+
+        <!-- Menus -->
+        <menuitem
+            id="agent_commission_root"
+            name="Agent Commission"
+            parent="sale.sale_menu_root"
+            sequence="5"/>
+
+        <menuitem
+            id="agent_commission_sub_menu"
+            name="Agent Commission"
+            parent="agent_commission_root"
+            action="agent_commission_action"
+            sequence="1"/>
+
+    </data>
+</odoo>
